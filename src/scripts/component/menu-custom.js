@@ -73,6 +73,8 @@ class MenuCustom extends HTMLElement {
             padding: 5px 10px;
             cursor: pointer;
             margin-top: 10px;
+            min-width: 44px;
+            min-height: 45px;
           }
           
           .menu-button:hover {
