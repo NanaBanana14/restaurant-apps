@@ -5,15 +5,15 @@ const Favorite = {
   async render() {
     return `
       <div class="content-detail">
-      <div class="content__header">
-        <h2 class="content__heading">Restoran Favorite</h2>
-        <div class="buttons-container">
-          <button class="back-button" id="back-button">Kembali</button>
+        <div class="content__header">
+          <h2 class="content__heading">Restoran Favorite</h2>
+          <div class="buttons-container">
+            <button class="back-button" id="back-button">Kembali</button>
+          </div>
+        </div>
+        <div id="restaurants" class="list-restoran">
         </div>
       </div>
-      <div id="restaurants" class="list-restoran">
-      </div>
-  </div>
     `;
   },
   async afterRender() {
@@ -22,13 +22,17 @@ const Favorite = {
 
     if (restaurantsContainer) {
       restaurantsContainer.innerHTML = '';
-    }
 
-    restaurants.forEach((restaurant) => {
-      if (restaurantsContainer) {
-        restaurantsContainer.innerHTML += createRestaurantFavoriteItemTemplate(restaurant);
+      if (restaurants.length === 0) {
+        restaurantsContainer.innerHTML = '<p class="no-data">Anda belum memiliki restaurant favorit. Klik button like pada detail restoran untuk menambahkan</p>';
+      } else {
+        restaurants.forEach((restaurant) => {
+          if (restaurantsContainer) {
+            restaurantsContainer.innerHTML += createRestaurantFavoriteItemTemplate(restaurant);
+          }
+        });
       }
-    });
+    }
 
     const backButton = document.getElementById('back-button');
     backButton.addEventListener('click', () => {
