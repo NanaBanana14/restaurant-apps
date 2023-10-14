@@ -56,7 +56,7 @@ if (searchButtonElement) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const readMoreButton = document.getElementById('readMoreButton');
+  const readMoreButton = document.getElementById('starterSearchButton');
 
   if (readMoreButton) {
     readMoreButton.addEventListener('click', () => {

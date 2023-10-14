@@ -21,11 +21,11 @@ const Review = {
             </div>
             <div class="review-form-item">
               <label for="name" class="label-form">Nama:</label>
-              <input type="text" id="name" name="name" class="form-control" required>
+              <input type="text" id="name" name="name" class="form-control">
             </div>
             <div class="review-form-item">
               <label for="review" class="label-form">Review:</label>
-              <textarea id="review" name="review" class="form-control" required>
+              <textarea id="review" name="review" class="form-control">
               </textarea>
             </div>
             <div class="review-form-item">
