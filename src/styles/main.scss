@@ -22,7 +22,7 @@ ul {
 }
 
 nav {
-  background-color: #FF9B50;
+  background-color: #FFBB5C;
   box-shadow: 0 0 0.8em #000;
   color: #fff;
   position: fixed;
@@ -39,6 +39,8 @@ nav {
 
 .logo {
   margin-left: 20px;
+  width: 100px;
+  height: 100%;
 }
 
 .logo-txt {
@@ -76,7 +78,8 @@ nav {
     padding: 10px;
 
     a {
-      color: #FFf;
+      color: #C63D2F;
+      font-weight: bold;
       font-size: 20px;
       min-width: 44px;
       min-height: 44px;
@@ -149,7 +152,7 @@ nav {
   min-height: 400px;
   width: 100%;
   text-align: center;
-  background-image: url('../public/images/heros/hero-image_4.jpg');
+  background-image: url('../public/images/heros/hero-image_4-large.jpg');
   background-position: center;
   background-color: #FFBB5C;
   grid-template-columns: 1fr; 
@@ -329,7 +332,7 @@ main {
   left: 10px;
   display: flex;
   flex-direction: column;
-  background-color: #FF9B50;
+  background-color: #C63D2F;
   padding: 5px;
   border-radius: 5px;
   color: #fff;
@@ -401,6 +404,12 @@ main {
   box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   display: inline-block;
+}
+
+.resto-img {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
 }
 
 .restaurant-detail {
@@ -729,8 +738,8 @@ i.fa.fa-heart-o {
 }
 
 .footer {
-  background-color: #FF9B50;
-  color: #fff;
+  background-color: #FFBB5C;
+  color: #C63D2F;
   padding: 30px 0;
   text-align: center;
 }
@@ -774,9 +783,10 @@ i.fa.fa-heart-o {
 
 
 .footer-links a {
-  color: #fff;
+  color: #C63D2F;
   text-decoration: none;
   font-weight: bold;
+  font-size: 20px;
   transition: color 0.3s ease;
   padding: 15px;
   min-height: 44px;
@@ -806,7 +816,8 @@ i.fa.fa-heart-o {
 
 .footer-disclaimer {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -854,6 +865,12 @@ button {
   box-sizing: border-box;
   min-width: 44px;
   min-height: 44px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    background-image: url('../public/images/heros/hero-image_4-small.jpg');
+  }
 }
 
 @media only screen and (max-width: 440px) {
@@ -1001,7 +1018,7 @@ button {
     height: 100px;
     min-height: 44px;
     min-width: 44px;
-    background-color: #FF9B50;
+    background-color: #FFBB5C;
     grid-template-columns: auto 1fr 1fr;
     padding-bottom: 10px;
   }
@@ -1060,3 +1077,5 @@ button {
     background-size: 100% auto;
   }
 }
+
+

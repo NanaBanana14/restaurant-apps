@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
 import './component/menu-custom';
@@ -7,6 +8,8 @@ import main from '../public/view/main';
 import App from './views/app';
 import RestaurantSource from './data/restourantdb-source';
 import swRegister from './utils/sw-register';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 document.addEventListener('DOMContentLoaded', main);
 
@@ -56,7 +59,7 @@ if (searchButtonElement) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const readMoreButton = document.getElementById('readMoreButton');
+  const readMoreButton = document.getElementById('starterSearchButton');
 
   if (readMoreButton) {
     readMoreButton.addEventListener('click', () => {
