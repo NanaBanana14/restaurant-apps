@@ -1,4 +1,7 @@
+/* eslint-disable*/
 import API_ENDPOINT from '../../globals/api-endpoint';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestaurantDetailTemplate = (restaurant) => `
  <h2 class="restaurant-name">${restaurant.name}</h2>
@@ -57,7 +60,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
         <div class="restaurant-card">
-            <img src="${API_ENDPOINT.MEDIUM_IMAGE(restaurant.pictureId)}" class="restaurant-image" alt="${restaurant.name}">
+            <img class="lazyload resto-img" src="${API_ENDPOINT.MEDIUM_IMAGE(restaurant.pictureId)}" class="restaurant-image" alt="${restaurant.name}">
             <div class="restaurant-details">
                 <p class="city-restaurant">Kota: ${restaurant.city}</p>
                 <p class="rating">Rating: ${restaurant.rating}</p>
@@ -71,7 +74,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantFavoriteItemTemplate = (restaurant) => `
         <div class="restaurant-card">
-            <img src="${API_ENDPOINT.MEDIUM_IMAGE(restaurant.pictureId)}" class="restaurant-image" alt="${restaurant.name}">
+            <img class="lazyload resto-img" src="${API_ENDPOINT.MEDIUM_IMAGE(restaurant.pictureId)}" class="restaurant-image" alt="${restaurant.name}">
             <div class="restaurant-details">
                 <p class="city-restaurant">Kota: ${restaurant.city}</p>
                 <p class="rating">Rating: ${restaurant.rating}</p>

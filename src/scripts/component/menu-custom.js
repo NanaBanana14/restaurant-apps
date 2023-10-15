@@ -76,42 +76,42 @@ class MenuCustom extends LitElement {
         </div>
         <article class="list-menu">
           <div class="card-menu">
-            <img src="https://i.pinimg.com/564x/f7/a4/93/f7a493c4bafc3a94fc1360142c31479b.jpg" alt="Menu Vegetarian"
+            <img loading="lazy" src="https://i.pinimg.com/564x/f7/a4/93/f7a493c4bafc3a94fc1360142c31479b.jpg" alt="Menu Vegetarian"
               class="menu-img">
             <h3 class="menu-title">Vegetarian</h3>
             <p>Menu tanpa daging atau produk nabati</p>
             <button class="menu-button">Read More</button>
           </div>
           <div class="card-menu">
-            <img src="https://i.pinimg.com/564x/c3/2d/c8/c32dc887f28784f3e496c37d4f27c8c6.jpg" alt="Indonesian Food"
+            <img loading="lazy" src="https://i.pinimg.com/564x/c3/2d/c8/c32dc887f28784f3e496c37d4f27c8c6.jpg" alt="Indonesian Food"
               class="menu-img">
             <h3 class="menu-title">Indonesian Food</h3>
             <p>Makanan khas dari berbagai daerah di Indonesia</p>
             <button class="menu-button">Read More</button>
           </div>
           <div class="card-menu">
-            <img src="https://i.pinimg.com/564x/11/22/59/112259057b3f915446bf9e8402619371.jpg" alt="Menu non Vegetarian"
+            <img loading="lazy" src="https://i.pinimg.com/564x/11/22/59/112259057b3f915446bf9e8402619371.jpg" alt="Menu non Vegetarian"
               class="menu-img">
             <h3 class="menu-title">Non-Vegetarian</h3>
             <p>Menu dengan daging atau produk hewani</p>
             <button class="menu-button">Read More</button>
           </div>
           <div class="card-menu">
-            <img src="https://i.pinimg.com/564x/8c/97/76/8c9776e91d67c77925d43288714a257b.jpg" alt="Korean Food"
+            <img loading="lazy" src="https://i.pinimg.com/564x/8c/97/76/8c9776e91d67c77925d43288714a257b.jpg" alt="Korean Food"
               class="menu-img">
             <h3 class="menu-title">Korean Food</h3>
             <p>Menu populer yang berasal dari Korea</p>
             <button class="menu-button">Read More</button>
           </div>
           <div class="card-menu">
-            <img src="https://i.pinimg.com/564x/52/0a/8e/520a8ece7fd6e0720f67ba333ec413c7.jpg" alt="Japanese Food"
+            <img loading="lazy" src="https://i.pinimg.com/564x/52/0a/8e/520a8ece7fd6e0720f67ba333ec413c7.jpg" alt="Japanese Food"
               class="menu-img">
             <h3 class="menu-title">Japanese Food</h3>
             <p>Menu populer yang berasal dari Jepang</p>
             <button class="menu-button">Read More</button>
           </div>
           <div class="card-menu">
-            <img src="https://i.pinimg.com/564x/27/f9/bb/27f9bb5e887035585fed629a7b8fd2f2.jpg" alt="Fast Food"
+            <img loading="lazy" src="https://i.pinimg.com/564x/27/f9/bb/27f9bb5e887035585fed629a7b8fd2f2.jpg" alt="Fast Food"
               class="menu-img">
             <h3 class="menu-title">Fast Food</h3>
             <p>Menu cepat saji dengan rasa yang pas di lidah</p>

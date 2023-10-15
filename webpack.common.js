@@ -5,7 +5,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // eslint-disable-next-line
 const webpack = require('webpack');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+// eslint-disable-next-line prefer-destructuring
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: {
@@ -21,24 +26,47 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
         ],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
         ],
       },
     ],
   },
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ],
+    splitChunks: {
+      chunks: 'all',
+      minSize: 20000,
+      maxSize: 70000,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -78,21 +106,29 @@ module.exports = {
         },
       ],
     }),
-    new WebpackPwaManifest({
-      filename: 'manifest.json',
-      name: 'Bellybites Catalogue Lite',
-      short_name: 'BB Lite',
-      description: 'Free Catalogue Restaurant for you',
-      background_color: '#ffffff',
-      theme_color: '#C63D2F',
-      start_url: './index.html',
-      display: 'standalone',
-      icons: [
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
         {
-          src: path.resolve(__dirname, './src/public/icons/icon-512x512.png'),
-          sizes: [96, 128, 192, 256, 384, 512],
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist'),
+          globOptions: {
+            // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+            ignore: ['**/images/**'],
+          },
         },
       ],
     }),
+    new MiniCssExtractPlugin({
+      filename: 'styles/style.css', // Nama file CSS hasil kompilasi
+    }),
+    new BundleAnalyzerPlugin(),
   ],
 };

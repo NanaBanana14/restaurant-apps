@@ -89,9 +89,9 @@ class ExploreComponent extends LitElement {
       <div class="explore">
         <article class="headline">
           <div class="headline__figure">
-            <img src="https://img.freepik.com/premium-photo/cooked-roasted-chicken-legs_89816-7044.jpg?w=740"
-              alt="cooked-roasted-chicken-legs" />
-            <figcaption>cooked-roasted-chicken-legs</figcaption>
+            <img loading="lazy" src="https://i.pinimg.com/564x/92/b3/8b/92b38be3c16a32d670294686d2407049.jpg"
+              alt="food" />
+            <figcaption>food</figcaption>
           </div>
           <div class="headline__content">
             <h3 class="headline__title">Berbagai Macam Menu ada disini</h3>
@@ -107,8 +107,8 @@ class ExploreComponent extends LitElement {
 
         <article class="headline">
           <div class="headline__figure">
-            <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+            <img loading="lazy"
+              src="https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg?size=626&ext=jpg&ga=GA1.2.402080748.1694688639&semt=sph"
               alt="Restaurant" />
             <figcaption>Restaurant</figcaption>
           </div>
@@ -126,7 +126,7 @@ class ExploreComponent extends LitElement {
 
         <article class="headline">
           <div class="headline__figure">
-            <img src="https://test.hypermart.co.id/wp-content/uploads/2021/03/25e.jpg" alt="Bahan Makanan" />
+            <img loading="lazy" src="https://i.pinimg.com/564x/5b/3c/b2/5b3cb2253b5a17c54500aab911f5168d.jpg" alt="Bahan Makanan" />
             <figcaption>Resep Makanan</figcaption>
           </div>
           <div class="headline__content">
@@ -143,7 +143,7 @@ class ExploreComponent extends LitElement {
 
         <article class="headline">
           <div class="headline__figure">
-            <img src="https://i.pinimg.com/564x/8b/a6/66/8ba6661d3053eb6ee76a1fa2c2da3ce5.jpg" alt="Blog Kuliner" />
+            <img loading="lazy" src="https://i.pinimg.com/564x/76/d3/ec/76d3ecd706b739820da52010eac581f2.jpg" alt="Blog Kuliner" />
             <figcaption>Blog Kuliner</figcaption>
           </div>
           <div class="headline__content">
